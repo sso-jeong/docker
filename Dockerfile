@@ -23,6 +23,6 @@ RUN mkdir -p ${KAFKA_HOME} && \
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
-EXPOSE 2181 9092 9094 8080
+EXPOSE 2181 9092 9094 3000
 
 CMD ["/start.sh"]

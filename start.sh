@@ -8,3 +8,5 @@ echo "✅ Starting Zookeeper..."
 sleep 5
 echo "✅ Starting Kafka..."
 /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties > /tmp/kafka.log 2>&1 &
+
+tail -f /dev/null

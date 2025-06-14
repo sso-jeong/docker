@@ -9,4 +9,6 @@ sleep 5
 echo "✅ Starting Kafka..."
 /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties > /tmp/kafka.log 2>&1 &
 
-tail -f /dev/null
+# 🔹 HTTP 서버로 Cloudtype의 Health Check 통과
+echo "✅ Starting dummy HTTP server on 3000..."
+python3 -m http.server 3000 > /tmp/http.log 2>&1
